@@ -1,4 +1,4 @@
-Welcome to the Collabo Project
+Welcome to the Collabo Depot Project
 
 This is an experimental application to create a collaborative website where
 people can post and link up to all kinds of artistic expressions on a private
