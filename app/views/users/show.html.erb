@@ -1,0 +1,8 @@
+<h1><%= @user.email %></h1>
+	<ul class="profile">
+		<li><strong>Member since: </strong><%= @user[:created_at].to_formatted_s(
+												:long_ordinal) %></li>
+		<li><strong>Last Signed in: </strong><%= @user[:last_sign_in_at].
+		 									to_formatted_s(:long_ordinal) %></li>
+		<li><strong>Projects: </strong><%= @user.projects.count %></li>
+	</ul>

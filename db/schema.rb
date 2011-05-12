@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110511145245) do
+ActiveRecord::Schema.define(:version => 20110512141751) do
+
+  create_table "projects", :force => true do |t|
+    t.string   "name"
+    t.string   "content"
+    t.integer  "user_id"
+    t.string   "inspire_file_name"
+    t.string   "inspire_content_type"
+    t.integer  "inspire_file_size"
+    t.datetime "inspire_udpated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
