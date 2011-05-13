@@ -59,7 +59,7 @@ div.username {
 }
 
 h1 {
-	padding: 10px;
+	text-align: center;
 }
 
 h2 {
@@ -67,7 +67,7 @@ h2 {
 }
 
 p {
-	padding-left: 15px;
+	padding-left: 20px;
 }
 
 /* Navigation Styling */
@@ -77,7 +77,7 @@ td.sidebar {
 	width: 40%;
 	padding: 1em;
 	vertical-align: top;
-	background: #cccc66;
+	background: #ffcc99;
 	border: solid black;
 }
 
@@ -89,15 +89,13 @@ td.sidebar {
 /* Link Styling */
 
 a {
-	padding-left: 15px;
 	color: black;
-	text-decoration: none;
+	text-decoration: underline;
 	font-weight: bold;
 }
 
 a:visited {
-	padding-left: 15px;
-	color: gray;
+	color: black;
 	text-decoration: none;
 	font-weight: bold;
 }

@@ -19,9 +19,7 @@
 				<table class="main">
 					<tr>
 						<% unless user_signed_in? %>
-						<td><%= image_tag "background.png", 
-								:alt => "background" %>
-						</td>
+						<td><%= link_to logo, root_path %></td>
 						<% end %>
 						<td class="sidebar round">
 							<%= render 'shared/links' %>
