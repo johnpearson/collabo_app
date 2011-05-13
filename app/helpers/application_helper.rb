@@ -13,4 +13,13 @@ module ApplicationHelper
   def logo
     logo = image_tag("background.png", :alt => "background")
   end
+  
+  # Button definitions to include images in home page
+  def button_up
+    button_up = image_tag("buttonup.png", :alt => "buttonup")
+  end
+  
+  def button_in
+    button_in = image_tag("buttonin.png", :alt => "buttonin")
+  end
 end

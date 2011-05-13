@@ -1,13 +1,13 @@
-<h1><%= @user.email %>'s Projects: </h1>
+<h1>My Projects: </h1>
 	<ul class="projects">
 		<% @projects.each do |project| %>
-			<li>
-				<%= project.name %><br />
-				<%= project.content %><br />
-				<%= project.inspire_file_name %><br />
-				<%= link_to "Inspirational Files", project.inspire.url %><br />
-				<%= project.created_at %><br />
-				<%= link_to "Edit", "projects/#{project.id}/edit" %><br />
-			</li>
+			<li><b><%= project.name %></b></li><br />
+			<li>Content:<%= project.content %></li><br />
+			<li>Attached Files:<%= project.inspire_file_name %></li><br />
+			<li><%= link_to "Inspirational Files", project.inspire.url %></li><br />
+			<li>Created on:<%= project.created_at %></li><br />
+			<li><%= link_to "Edit", "projects/#{project.id}/edit" %></li><br />
+			<li><%= link_to "Delete", project, :method => :delete,
+			 	:confirm => "Are you sure?", :title => "Delete #{project.name}" %>
 		<% end %>
 	</ul>

@@ -22,20 +22,6 @@ container {
 	background: #fff;
 }
 
-header {
-	margin-top: 10px;
-	width: 980px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: 10px;
-	background-color: #fff;
-}
-
-header img {
-	padding: .5em;
-	background: #fff;
-}
-
 section {
 	margin-top: 5px;
 	width: 980px;
@@ -67,7 +53,7 @@ h2 {
 }
 
 p {
-	padding-left: 20px;
+	padding-left: 15px;
 }
 
 /* Navigation Styling */
@@ -89,12 +75,14 @@ td.sidebar {
 /* Link Styling */
 
 a {
+	padding-left: 15px;
 	color: black;
 	text-decoration: underline;
 	font-weight: bold;
 }
 
 a:visited {
+	padding-left: 15px;
 	color: black;
 	text-decoration: none;
 	font-weight: bold;
@@ -106,7 +94,7 @@ p a:link {
 }
 
 p a:visited {
-	color: gray;
+	color: black;
 	text-decoration: none;
 }
 
@@ -121,7 +109,7 @@ li a:link {
 }
 
 li a:visited {
-	color: gray;
+	color: black;
 	text-decoration: none;
 }
 
