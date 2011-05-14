@@ -113,6 +113,12 @@ li a:visited {
 	text-decoration: none;
 }
 
+/* User Pages */
+
+.main {
+	width: 60%;
+}
+
 /* Footer */
 
 .footer {

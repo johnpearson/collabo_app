@@ -18,11 +18,11 @@
 				<% end %>
 				<table class="main">
 					<tr>
-						<td><%= link_to logo, root_path %></td>
-						<td class="sidebar round">
-							<%= render 'shared/links' %>
-							<%= yield %>
-						</td>
+						<% if user_signed_in? %>
+							<%= render 'shared/user_home' %>
+						<% else %>
+							<%= render 'shared/home' %>
+						<% end %>
 					</tr>
 				</table>
 			</section>
