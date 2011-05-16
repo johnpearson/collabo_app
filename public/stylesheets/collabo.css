@@ -113,7 +113,11 @@ li a:visited {
 	text-decoration: none;
 }
 
-/* User Pages */
+div.button h1 a {
+	padding-left: 0px;
+}
+
+/* User Pages 
 
 .main {
 	width: 60%;
