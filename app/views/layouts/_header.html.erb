@@ -1,3 +1,12 @@
-<header class="round">
-	
+<header>
+	<%= image_tag('smalllogo.png', :alt => "smalllogo") %>
+	<nav class="navheader">
+	<ul>
+		<li><%= link_to "Create New Project", new_project_path %></li>
+		<li><%= link_to "View Projects", projects_path %></li>
+		<li><%= link_to "Artist Profile", user_path(current_user.id) %></li>
+		<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+		<li><%= link_to "Sign Out", destroy_user_session_path %></li>
+	</ul>
+	</nav>
 </header>

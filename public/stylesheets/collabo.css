@@ -36,24 +36,88 @@ section h1 {
 	font-size: 200%;
 }
 
-div.username {
-	text-align: right;
-	margin-right: 1em;
-	font-size: 120%;
-	font-style: italic;
-	font-weight: bold;
-}
-
 h1 {
 	text-align: center;
 }
 
 h2 {
-	padding-left: 10px;
+	font-size: 150%;
 }
 
 p {
 	padding-left: 15px;
+}
+
+/* Header Styling */
+
+header {
+	height: 68px;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	background-color: #ffcc99;
+	border-bottom: black solid;
+}
+
+header img {
+	padding-left: 1.5em;
+	background: #ffcc99;
+	float: left;
+}
+
+/* Header Navigation Styling */
+
+nav {
+	padding-top: .7em;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 125%;
+}
+
+nav.navheader {
+	margin-top: 0px;
+	background: #ffcc99;
+}
+
+nav.navheader p {
+	float: left;
+}
+
+nav p {
+	font-size: 100%;
+	padding: 0.5em;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav.navheader ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.5em 0;
+}
+
+nav ul li a {
+	padding: 0 20px;
+	font-size: 120%;
+	font-weight: bold;
+	text-decoration: none;
+	color: #A52A2A;
+}
+
+nav ul li a:visited {
+	color: #A52A2A;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+nav.search {
+	float: right;
 }
 
 /* Navigation Styling */
@@ -117,10 +181,16 @@ div.button h1 a {
 	padding-left: 0px;
 }
 
-/* User Pages 
+/* User Pages */
 
 .main {
-	width: 60%;
+	width: 950px;
+}
+
+/* Projects Page */
+
+.projects li {
+	list-style: none;
 }
 
 /* Footer */

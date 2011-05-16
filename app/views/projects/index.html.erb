@@ -1,13 +1,15 @@
 <h1>My Projects: </h1>
 	<ul class="projects">
 		<% @projects.each do |project| %>
-			<li><b><%= project.name %></b></li><br />
-			<li>Content:<%= project.content %></li><br />
-			<li>Attached Files:<%= project.inspire_file_name %></li><br />
-			<li><%= link_to "Inspirational Files", project.inspire.url %></li><br />
-			<li>Created on:<%= project.created_at %></li><br />
-			<li><%= link_to "Edit", "projects/#{project.id}/edit" %></li><br />
+			<li><h2><b><%= project.name %></b></h2></li><br />
+			<li><b>Content: </b><%= project.content %></li><br />
+			<li><b>Attached Files: </b><%= project.inspire_file_name %></li><br />
+			<li><b>Created on: </b><%= project.created_at.to_formatted_s(
+								:long_ordinal)%></li><br />
+			<li><%= link_to "Inspirational Files", project.inspire.url %></li>
+			<li><%= link_to "Edit", "projects/#{project.id}/edit" %></li>
 			<li><%= link_to "Delete", project, :method => :delete,
-			 	:confirm => "Are you sure?", :title => "Delete #{project.name}" %>
+			 						:confirm => "Are you sure?", 
+									:title => "Delete #{project.name}" %></li><br />
 		<% end %>
 	</ul>
