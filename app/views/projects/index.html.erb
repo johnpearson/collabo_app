@@ -1,6 +1,9 @@
 <h1>My Projects: </h1>
-	<ul class="projects">
-		<% @projects.each do |project| %>
+<% @projects.each do |project| %>
+<table class="projects">
+	<tr>
+		<td>
+			<ul>	
 			<li><h2><b><%= project.name %></b></h2></li><br />
 			<li><b>Content: </b><%= project.content %></li><br />
 			<li><b>Attached Files: </b><%= project.inspire_file_name %></li><br />
@@ -11,5 +14,8 @@
 			<li><%= link_to "Delete", project, :method => :delete,
 			 						:confirm => "Are you sure?", 
 									:title => "Delete #{project.name}" %></li><br />
-		<% end %>
-	</ul>
+			</ul>
+		</td>
+	</tr>
+</table>
+<% end %>

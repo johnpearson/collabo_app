@@ -194,14 +194,15 @@ table.profile {
 }
 
 table.profile tr td {
-	background: #F0F8FF;
+/*	background: #F0F8FF; */
 	text-align: center;
 	padding: 1em;
+	border: solid black;
 }
 
 table.profile td {
-	width: 18%;
-}
+	width: 33%;
+} 
 
 .profile td ul li {
 	text-align: left;
@@ -211,7 +212,17 @@ table.profile td {
 
 /* Projects Page */
 
-.projects li {
+table.projects {
+	width: 980px;
+}
+
+table.projects tr td {
+	padding-left: 2em;
+	background: #F0F8FF;
+	border: solid black;
+}
+
+table.projects tr ul li {
 	list-style: none;
 }
 
