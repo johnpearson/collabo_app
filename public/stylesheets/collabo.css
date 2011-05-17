@@ -187,6 +187,28 @@ div.button h1 a {
 	width: 950px;
 }
 
+/* Profile Page */
+
+table.profile {
+	width: 980px;
+}
+
+table.profile tr td {
+	background: #F0F8FF;
+	text-align: center;
+	padding: 1em;
+}
+
+table.profile td {
+	width: 18%;
+}
+
+.profile td ul li {
+	text-align: left;
+	padding-left: 2em;
+	list-style: none;
+}
+
 /* Projects Page */
 
 .projects li {

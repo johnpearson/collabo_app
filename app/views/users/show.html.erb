@@ -1,8 +1,32 @@
 <h1><%= @user.name %></h1>
-	<ul class="profile">
-		<li><strong>Member since: </strong><%= @user[:created_at].to_formatted_s(
-												:long_ordinal) %></li>
-		<li><strong>Last Signed in: </strong><%= @user[:last_sign_in_at].
-		 									to_formatted_s(:long_ordinal) %></li>
-		<li><strong>Projects: </strong><%= @user.projects.count %></li>
-	</ul>
+	<table class="profile round">
+		<tr>
+			<td><h2>Personal Information</h2><br />
+				<ul>
+					<li>Name: <%= @user.name %></li><br />
+					<li>Email: <%= @user.email %></li><br />
+					<li>Address: </li><br />
+					<li>Hobbies: </li><br />
+					<li>Artistic Influences: </li><br />
+					<li>Inspired by: </li><br />
+				</ul>
+			</td>
+			<td><h2>Projects</h2><br />
+				<% unless @projects.empty? %>
+					<% @projects.each do |project| %>
+						<ul>
+							<li><%= project.name %></li><br />
+						</ul>
+					<% end %>
+				<% end%>
+			</td>
+			<td><h2>Links</h2><br />
+				<ul>
+					<li><%= link_to "Facebook", "#" %></li><br />
+					<li><%= link_to "Twitter", "#" %></li><br />
+					<li><%= link_to "Website", "#" %></li><br />
+					<li><%= link_to "Other", "#" %></li><br />
+				</ul>
+			</td>
+		</tr>
+	</table>
