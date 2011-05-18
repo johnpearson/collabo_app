@@ -4,7 +4,8 @@
 	<tr>
 		<td>
 			<ul>	
-			<li><h2><b><%= project.name %></b></h2></li><br />
+			<li><h2><b><%= project.name %></b></h2>
+						<h3><i>by <%= @user.name %></i></h3></li><br />
 			<li><b>Content: </b><%= project.content %></li><br />
 			<li><b>Attached Files: </b><%= project.inspire_file_name %></li><br />
 			<li><b>Created on: </b><%= project.created_at.to_formatted_s(
