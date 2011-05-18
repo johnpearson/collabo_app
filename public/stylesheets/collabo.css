@@ -59,6 +59,7 @@ header {
 
 header img {
 	padding-left: 3em;
+	padding-right: 3em;
 	background: #ffcc99;
 	float: left;
 }
@@ -69,7 +70,7 @@ nav {
 	padding-top: .7em;
 	white-space: nowrap;
 	text-align: left;
-	font-size: 125%;
+	font-size: 115%;
 }
 
 nav.navheader {
@@ -94,11 +95,11 @@ nav ul {
 nav.navheader ul li {
 	list-style-type: none;
 	display: inline-block;
-	padding: 0.5em 0;
+	padding: .5em;
+	padding-right: 2em;
 }
 
 nav ul li a {
-	padding: 0 20px;
 	font-size: 120%;
 	font-weight: bold;
 	text-decoration: none;
@@ -194,7 +195,7 @@ table.profile tr td {
 /*	background: #F0F8FF; */
 	text-align: center;
 	padding: 1em;
-	border: solid black;
+	border: thin solid gray;
 }
 
 table.profile td {
