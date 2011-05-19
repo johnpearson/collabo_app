@@ -5,16 +5,20 @@
 		<td>
 			<ul>	
 			<li><h2><b><%= project.name %></b></h2>
-						<h3><i>by <%= @user.name %></i></h3></li><br />
+				<h3><i>by <% @id = project.user_id %>
+						  <% @user = User.find(@id)%>
+						  <%= @user.name %></i></h3></li><br />
 			<li><b>Content: </b><%= project.content %></li><br />
 			<li><b>Attached Files: </b><%= project.inspire_file_name %></li><br />
 			<li><b>Created on: </b><%= project.created_at.to_formatted_s(
 								:long_ordinal)%></li><br />
 			<li><%= link_to "Inspirational Files", project.inspire.url %></li>
+			<% if current_user == @user %>
 			<li><%= link_to "Edit", "projects/#{project.id}/edit" %></li>
 			<li><%= link_to "Delete", project, :method => :delete,
 			 						:confirm => "Are you sure?", 
 									:title => "Delete #{project.name}" %></li><br />
+			<% end %>
 			</ul>
 		</td>
 	</tr>

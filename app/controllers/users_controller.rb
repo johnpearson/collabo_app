@@ -12,6 +12,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @project = Project.new
     @projects = @user.projects
-    @title = @user.email
+    @title = @user.name
   end
 end

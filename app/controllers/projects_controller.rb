@@ -20,7 +20,6 @@ class ProjectsController < ApplicationController
   # The index action shows all the projects created by the current user
   def index
     @projects = Project.all
-    @user = User.find(params[:id => :user_id])
     @title = "Projects"
   end
   
