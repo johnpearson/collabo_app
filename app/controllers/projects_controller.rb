@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     end
   end
   
-  # The index action shows all the projects created by the current user
+  # The index action shows all the projects created by all users
   def index
     @projects = Project.all
     @title = "Projects"

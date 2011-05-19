@@ -3,19 +3,24 @@
 		<tr>
 			<td><h2>Personal Information</h2><br />
 				<ul>
-					<li>Name: <%= @user.name %></li><br />
-					<li>Email: <%= @user.email %></li><br />
-					<li>Location: <%= @user.location %></li><br />
-					<li>Hobbies: <%= @user.hobbies %></li><br />
-					<li>Artistic Influences: <%= @user.influences %></li><br />
-					<li>Inspired by: <%= @user.inspiration %></li><br />
+					<li><b>Name: </b><%= @user.name %></li><br />
+					<li><b>Email: </b><%= @user.email %></li><br />
+					<li><b>Member Since: </b><%= (@user.created_at.to_formatted_s(
+								:long_ordinal)).gsub! /\d\d\:\d\d/, '' %></li><br />
+					<li><b>Location: </b><%= @user.location %></li><br />
+					<li><b>Hobbies: </b><%= @user.hobbies %></li><br />
+					<li><b>Artistic Influences: </b><%= @user.influences 
+														%></li><br />
+					<li><b>Inspired by: </b><%= @user.inspiration %></li><br />
 				</ul>
 			</td>
 			<td><h2>Projects</h2><br />
 				<% unless @projects.empty? %>
 					<% @projects.each do |project| %>
 						<ul>
-							<li><%= project.name %></li><br />
+							<li><%= project.name %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+								<%= (project.created_at.to_formatted_s(
+								:long_ordinal)).gsub! /\d\d\:\d\d/, '' %></li><br />
 						</ul>
 					<% end %>
 				<% end%>

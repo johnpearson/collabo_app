@@ -1,4 +1,6 @@
-<h1>My Projects: </h1>
+<div class="heading">
+	<%= image_tag('projects.png', :alt => 'projects') %>
+</div>
 <% @projects.each do |project| %>
 <table class="projects">
 	<tr>
@@ -7,12 +9,12 @@
 			<li><h2><b><%= project.name %></b></h2>
 				<h3><i>by <% @id = project.user_id %>
 						  <% @user = User.find(@id)%>
-						  <%= @user.name %></i></h3></li><br />
-			<li><b>Content: </b><%= project.content %></li><br />
+						  <%= @user.name %></i></h3></li>
+			<li><b>Created on: </b><%= (project.created_at.to_formatted_s(
+						:long_ordinal)).gsub! /\d\d\:\d\d/, '' %></li>
+			<li><b>Content: </b><%= simple_format(project.content) %></li><br />
 			<li><b>Attached Files: </b><%= project.inspire_file_name %></li><br />
-			<li><b>Created on: </b><%= project.created_at.to_formatted_s(
-								:long_ordinal)%></li><br />
-			<li><%= link_to "Inspirational Files", project.inspire.url %></li>
+			<li><%= link_to "Inspirational Files", project.inspire.url %></li><br />
 			<% if current_user == @user %>
 			<li><%= link_to "Edit", "projects/#{project.id}/edit" %></li>
 			<li><%= link_to "Delete", project, :method => :delete,
